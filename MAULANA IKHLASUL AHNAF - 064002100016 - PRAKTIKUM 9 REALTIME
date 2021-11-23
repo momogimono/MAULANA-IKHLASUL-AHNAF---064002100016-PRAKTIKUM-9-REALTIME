@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 23 17:10:30 2021
+
+@author: User
+NAMA:MAULANA IKHLASUL AHNAF
+NIM:06400200016
+"""
+
+def tulis(n):
+    file = open('File_biodata.txt','w')
+    file.write(str(n))
+    file.close()
+
+def baca():
+    file = open('File_biodata.txt','r')
+    print(file.read())
+    file.close()
+
+P = str(input('masukan nama = '))
+Q = str(input('masukan umur = '))
+R = str(input('masukan alamat = '))
+S = str(input('masukan email = '))
+T = str(input('masukan nama dosen walimu = '))
+bio = str(f'''
+Nama = {P}
+Umur = {Q}
+Alamat = {R}
+Email = {S}
+Dosen Wali = {T}''')
+
+print('\nBerikut Isi Data kamu')
+tulis(bio)
+baca()
